@@ -8,7 +8,7 @@
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  transition: all 0.3 linear;
+  transition: all 0.3s linear;
 }
 
 :root {
@@ -59,6 +59,18 @@ section{
 .btn:hover {
   background: var(--blue);
   color: var(--black);
+}
+.heading{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.heading span{
+  color: var(--blue);
+  font-size: 2rem;
+}
+.heading h2{
+  font-size: 4rem;
+  color: var(--white);
 }
 
 /* header style */
@@ -227,6 +239,59 @@ section{
   color: var(--light-color);
   line-height: 2;
 }
+/* destination styles */
+.destination .box-container{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(27rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+}
+.destination .box-container .box{
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+.destination .box-container .box:hover img{
+  transform: scale(1.1);
+}
+.destination .box-container .box .image{
+  height: 20rem;
+  width: 100%;
+  overflow: hidden;
+}
+.destination .box-container .box .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.destination .box-container .box .content{
+  padding: 2rem;
+  text-align: center;
+}
+.destination .box-container .box .content h3{
+  font-size: 2rem;
+  color: var(--white);
+}
+.destination .box-container .box .content p{
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+.destination .box-container .box .content a{
+  font-size: 1.7rem;
+  color: var(--blue);
+}
+.destination .box-container .box .content a:hover i{
+  padding-left: 1rem;
+}
+.destination .box-container .box .content a i{
+  padding-right: 0.5rem;
+}
+
+
+
 
 
 
