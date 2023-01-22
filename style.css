@@ -345,6 +345,66 @@ section{
   font-size: 2rem;
   color: var(--white);
 }
+/* Blog style */
+.blog .box-container{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(27rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 1.5rem;
+}
+.blog .box-container .box{
+  border-radius: 1rem;
+  background: var(--bg-color);
+  overflow: hidden;
+}
+.blog .box-container .box .image{
+  height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+.blog .box-container .box .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.blog .box-container .box:hover .image img{
+  transform: scale(1.1);
+}
+.blog .box-container .box .content{
+  padding: 2rem;
+}
+.blog .box-container .box .content .link{
+  font-size: 2rem;
+  color: var(--white);
+}
+.blog .box-container .box .content .link:hover{
+  color: var(--blue);
+}
+.blog .box-container .box .content p{
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+.blog .box-container .box .content .icon{
+  padding: 1rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog .box-container .box .content .icon a{
+  font-size: 1.4rem;
+  color: var(--light-color);
+}
+.blog .box-container .box .content .icon a:hover{
+  color: var(--blue);
+}
+.blog .box-container .box .content .icon a i{
+  padding-right: .5rem;
+  color: var(--blue);
+}
+
 
 
 
