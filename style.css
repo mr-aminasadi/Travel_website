@@ -41,18 +41,18 @@ html::-webkit-scrollbar-thumb {
 }
 body {
   background: var(--black);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 section{
   padding: 3rem 9%;
 }
 .btn {
   display: inline-block;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   font-size: 1.7rem;
   color: var(--blue);
   border: var(--border);
-  border-radius: 5rem;
+  border-radius: 2.5rem;
   cursor: pointer;
   background: none;
 }
@@ -243,8 +243,8 @@ section{
 .destination .box-container{
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(27rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
 .destination .box-container .box{
@@ -345,6 +345,71 @@ section{
   font-size: 2rem;
   color: var(--white);
 }
+/* Review style */
+.review{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.review .content{
+  flex: 1 1 42rem;
+}
+.review .content span{
+  font-size: 2rem;
+  color: var(--blue);
+}
+.review .content h3{
+  font-size: 3rem;
+  color: var(--white);
+}
+.review .content p{
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  line-height: 2;
+}
+.review .box-container{
+  flex: 1 1 42rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.review .box-container .box{
+  flex: 1 1 20rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: var(--bg-color);
+  border: .2rem solid var(--black);
+}
+.review .box-container .box:hover{
+  border: var(--border);
+}
+.review .box-container .box p{
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+  line-height: 2;
+  color: var(--light-color);
+}
+.review .box-container .box .user{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.review .box-container .box .user img{
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+.review .box-container .box .user h6{
+  font-size: 1.7rem;
+  color: var(--white);
+}
+.review .box-container .box .user span{
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
 /* Blog style */
 .blog .box-container{
   display: -ms-grid;
@@ -404,10 +469,113 @@ section{
   padding-right: .5rem;
   color: var(--blue);
 }
+/* Banner style */
+.banner{
+  background: linear-gradient(var(--black-bg),var(--black-bg)), url(./images/banner-bg.jpg) no-repeat ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.banner .content span{
+  font-size: 2rem;
+  color: var(--blue);
+}
+.banner .content h3{
+  font-size: 4rem;
+  color: var(--white);
+  margin-top: 1rem;
+}
+.banner .content p{
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  line-height: 2;
+}
 
+/* Footer style */
+.footer .box-container{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.footer .box-container .box{
+  padding: 1rem 0;
+}
+.footer .box-container .box .logo{
+  padding-bottom: 1rem;
+}
+.footer .box-container .box h5{
+  font-size: 2.2rem;
+  color: var(--white);
+  padding: 1rem 0;
+}
+.footer .box-container .box p{
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  line-height: 2;
+}
+.footer .box-container .box .share{
+  padding-top: 1rem;
+}
+.footer .box-container .box .share a{
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4rem;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  border: var(--border);
+  color: var(--blue);
+  margin-right: .5rem;
+  text-align: center;
+}
+.footer .box-container .box .share a:hover{
+  background: var(--blue);
+  color: var(--black);
+}
 
+.footer .box-container .box .links{
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  display: inherit;
+}
+.footer .box-container .box .links:hover{
+  color: var(--blue);
+}
+.footer .box-container .box .links:hover i{
+  padding-right: .5rem;
+}
+.footer .box-container .box i{
+  padding-right: 1rem;
+  color: var(--blue);
+}
+.footer .box-container .box form .email{
+  width: 100%;
+  border: var(--border);
+  border-radius: 5rem;
+  background: none;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: var(--light-color);
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.4rem;
+}
 
-
+.credit{
+  background: var(--bg-color);
+  color: var(--light-color);
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.5rem 1rem;
+}
+.credit span{
+  color: var(--blue);
+}
 
 
 
@@ -478,5 +646,8 @@ section{
   }
   .about .content h3{
     font-size: 3.5rem;
+  }
+  .banner .content h3{
+    font-size: 2.7rem;
   }
 }
